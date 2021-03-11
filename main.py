@@ -59,5 +59,5 @@ if __name__ == '__main__':
 
 
 
-    pyglet.clock.schedule_interval(simulation.update, 1 / 60.0)
+    pyglet.clock.schedule_interval(simulation.update, 1 / 4.0)
     pyglet.app.run()

@@ -67,11 +67,7 @@ class ValveDevice(Device):
         anode = self.nodes[1]
         gate = self.nodes[2]
 
-        out = cathode.state-gate.state
-        if out < 0:
-            out = 0
-
-        manager.update_connection(cathode, anode, 16-out)
+        manager.update_connection(cathode, anode, gate.state)
 
         super().update()
 
